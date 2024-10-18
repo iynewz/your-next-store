@@ -103,7 +103,6 @@ export default async function SingleProductPage(props: {
 					)}
 				</BreadcrumbList>
 			</Breadcrumb>
-
 			<div className="mt-4 grid gap-4 lg:grid-cols-12">
 				<div className="lg:col-span-5 lg:col-start-8">
 					<h1 className="text-3xl font-bold leading-none tracking-tight text-foreground">{product.name}</h1>
@@ -194,7 +193,7 @@ export default async function SingleProductPage(props: {
 
 async function SimilarProducts({ id }: { id: string }) {
 	const products = await getRecommendedProducts({ productId: id, limit: 4 });
-
+	console.log("getRecommendedProducts", products);
 	if (!products) {
 		return null;
 	}

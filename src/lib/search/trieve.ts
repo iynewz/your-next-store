@@ -6,11 +6,12 @@ const apiKey = process.env.TRIEVE_API_KEY;
 const datasetId = process.env.TRIEVE_DATASET_ID;
 
 export const trieve = apiKey && datasetId ? new TrieveSDK({ apiKey, datasetId }) : null;
-
+console.log("trieve--", trieve);
 export const getRecommendedProducts = cache(({ productId, limit }: { productId: string; limit: number }) =>
 	unstable_cache(
 		async () => {
 			if (!trieve) {
+				console.log("no", trieve);
 				return null;
 			}
 
@@ -35,6 +36,7 @@ export const getRecommendedProducts = cache(({ productId, limit }: { productId: 
 				});
 				return products;
 			} catch (error) {
+				console.log("-----error", trieve);
 				console.error(error);
 				return null;
 			}

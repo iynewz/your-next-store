@@ -80,6 +80,9 @@
 			"title": "Searching for"
 		}
 	},
+	"/about": {
+		"page": { "title": "Who am i" }
+	},
 	"/products": {
 		"metadata": {
 			"title": "All Products · Your Next Store"

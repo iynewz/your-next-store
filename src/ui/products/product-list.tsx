@@ -5,9 +5,12 @@ import type * as Commerce from "commerce-kit";
 import { getLocale } from "next-intl/server";
 import Image from "next/image";
 
-export const ProductList = async ({ products }: { products: Commerce.MappedProduct[] }) => {
+export const ProductList = async ({
+	products,
+}: {
+	products: Commerce.MappedProduct[];
+}) => {
 	const locale = await getLocale();
-
 	return (
 		<>
 			<ul className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
