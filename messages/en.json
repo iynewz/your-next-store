@@ -59,10 +59,10 @@
 	},
 	"/": {
 		"hero": {
-			"title": "Discover our Curated Collection",
-			"description": "Explore our carefully selected products for your home and lifestyle.",
-			"action": "Shop Now",
-			"link": "/category/accessories"
+			"title": "Handmade Felted Pets: A Unique Tribute to Your Furry Friend",
+			"description": "100% Handmade & Customized Felted Pets to Keep Your Loved Ones Close",
+			"action": "Order Now",
+			"link": "/category/customized"
 		}
 	},
 	"/search": {
@@ -108,6 +108,15 @@
 		},
 		"page": {
 			"title": "Category: {categoryName}"
+		},
+		"orderProcess": {
+			"title": "How to Order",
+			"email": "📧 Get in touch with me directly! Please send me your pet's photos and maybe other to {email}. I guarantee a response within 24 hours.",
+			"photo": "📷 I'd love to see many photos of your beloved pet from different angles - front, side, top, the more the better. These photos are crucial for me to really capture your pet's unique personality and likeness in the finished piece.",
+			"beforeShipping": "🐈‍⬛ I'll share photos of the completed artwork with you before shipping, so you can approve it. And if you'd like me to make any adjustments, just let me know.",
+			"timeline": "✈️ Each piece typically takes 20-40 days to complete (excluding modifications) and will be shipped in about 10 working days thereafter. Just a heads up that pets with more complicated color patterns take me extra time to get just right. I really appreciate your patience!",
+			"special": "💅 Please note that all my works are 100% hand-made for you. If you have specific requests, such as adding accessories like hats or charms, or adding your pet's distinctive markings, please let me know, and I'll be happy to accommodate them. As each handmade product is unique, I'm unable to support returns or exchanges after shipping.",
+			"gift": "🎁 A needle-felted creation makes a truly heartfelt gift. Whether it's for a birthday, anniversary, or special occasion, I can create a memorable piece that will be cherished for years to come. I'd be happy to include gift wrapping or a personalized note if you need that as well. Just let me know how I can make this the perfect present."
 		}
 	},
 	"/cart": {

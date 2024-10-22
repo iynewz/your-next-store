@@ -12,12 +12,12 @@ const links = [
 		href: "/",
 	},
 	{
-		label: "Accessories",
-		href: "/category/accessories",
+		label: "Customized",
+		href: "/category/customized",
 	},
 	{
-		label: "Digital",
-		href: "/category/digital",
+		label: "Ready-made pieces",
+		href: "/category/ready-made",
 	},
 	{
 		label: "About me",

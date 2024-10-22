@@ -1,8 +1,10 @@
+import { CUSTOMIZED_SLUG } from "@/consts/consts";
 import { publicUrl } from "@/env.mjs";
 import { getRecommendedProducts } from "@/lib/search/trieve";
 import { cn, deslugify, formatMoney, formatProductName } from "@/lib/utils";
 import type { TrieveProductMetadata } from "@/scripts/upload-trieve";
 import { AddToCartButton } from "@/ui/add-to-cart-button";
+import { CustomizedProcess } from "@/ui/customizedProcess/customizedProcess";
 import { JsonLd, mappedProductToJsonLd } from "@/ui/json-ld";
 import { Markdown } from "@/ui/markdown";
 import {
@@ -69,6 +71,7 @@ export default async function SingleProductPage(props: {
 	const locale = await getLocale();
 
 	const category = product.metadata.category;
+	const isCustomizedPage = params.slug === CUSTOMIZED_SLUG;
 
 	return (
 		<article className="pb-12">
@@ -183,6 +186,7 @@ export default async function SingleProductPage(props: {
 					<AddToCartButton productId={product.id} disabled={product.metadata.stock <= 0} />
 				</div>
 			</div>
+			{isCustomizedPage && <CustomizedProcess />}
 			<Suspense>
 				<SimilarProducts id={product.id} />
 			</Suspense>

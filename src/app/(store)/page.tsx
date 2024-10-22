@@ -47,18 +47,18 @@ export default async function Home() {
 				</div>
 			</section>
 
-			<ProductList products={products} />
-
 			<section className="w-full py-8">
 				<div className="grid gap-8 lg:grid-cols-2">
 					{[
-						{ categorySlug: "accessories", src: AccessoriesImage },
+						{ categorySlug: "customized", src: AccessoriesImage },
 						{ categorySlug: "apparel", src: ApparelImage },
 					].map(({ categorySlug, src }) => (
 						<CategoryBox key={categorySlug} categorySlug={categorySlug} src={src} />
 					))}
 				</div>
 			</section>
+
+			<ProductList products={products} />
 		</main>
 	);
 }

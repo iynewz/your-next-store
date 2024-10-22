@@ -1,5 +1,7 @@
+import { CUSTOMIZED_SLUG } from "@/consts/consts";
 import { publicUrl } from "@/env.mjs";
 import { deslugify } from "@/lib/utils";
+import { CustomizedProcess } from "@/ui/customizedProcess/customizedProcess";
 import { ProductList } from "@/ui/products/product-list";
 import * as Commerce from "commerce-kit";
 import { getTranslations } from "next-intl/server";
@@ -41,6 +43,8 @@ export default async function CategoryPage(props: {
 	}
 
 	const t = await getTranslations("/category.page");
+	console.log("--params-", params.slug, params);
+	const isCustomizedPage = params.slug === CUSTOMIZED_SLUG;
 
 	return (
 		<main className="pb-8">
@@ -48,6 +52,7 @@ export default async function CategoryPage(props: {
 				{t("title", { categoryName: deslugify(params.slug) })}
 			</h1>
 			<ProductList products={products} />
+			{isCustomizedPage && <CustomizedProcess />}
 		</main>
 	);
 }

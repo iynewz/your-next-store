@@ -12,8 +12,8 @@ const sections = [
 				href: "/category/apparel",
 			},
 			{
-				label: "Accessories",
-				href: "/category/accessories",
+				label: "Ready-made",
+				href: "/category/ready-made",
 			},
 		],
 	},
