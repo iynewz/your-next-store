@@ -43,10 +43,11 @@ export async function Footer() {
 		<footer className="w-full bg-neutral-50 p-6 text-neutral-800 md:py-12">
 			<div className="container flex max-w-7xl flex-row flex-wrap justify-center gap-16 text-sm sm:justify-between">
 				<div className="">
-					<div className="flex w-full max-w-sm flex-col gap-2">
-						<h3 className="font-semibold">{t("newsletterTitle")}</h3>
-						<Newsletter />
-					</div>
+					{/* support news letter and blog later */}
+					{/* <div className="flex w-full max-w-sm flex-col gap-2">
+            <h3 className="font-semibold">{t("newsletterTitle")}</h3>
+            <Newsletter />
+          </div> */}
 				</div>
 
 				<nav className="grid grid-cols-2 gap-16">

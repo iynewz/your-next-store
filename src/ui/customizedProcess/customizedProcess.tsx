@@ -4,14 +4,7 @@ import React from "react";
 export async function CustomizedProcess() {
 	const t = await getTranslations("/category.orderProcess");
 	const email = "wendy@feltwith.love";
-	const orderSteps = [
-		t("email", { email }),
-		t("photo"),
-		t("beforeShipping"),
-		t("timeline"),
-		t("special"),
-		t("gift"),
-	];
+	const orderSteps = [t("photo"), t("beforeShipping"), t("timeline"), t("special"), t("gift")];
 
 	return (
 		<>
@@ -19,6 +12,13 @@ export async function CustomizedProcess() {
 
 			<div className="mt-8 p-0">
 				<ul className="text-gray-700 text-base">
+					<li className="mb-5 text-lg leading-relaxed first-letter:text-4xl ">
+						📧 Email me directly! You can send me your pet's photos and any requests to{" "}
+						<a href={`mailto:${email}`} className="text-blue-700">
+							{email}
+						</a>
+						. If you have any questions, don’t hesitate to email me. I guarantee a response within 24 hours.
+					</li>
 					{orderSteps.map((v, index) => (
 						<li key={index} className="mb-5 text-lg leading-relaxed first-letter:text-4xl ">
 							{v}
